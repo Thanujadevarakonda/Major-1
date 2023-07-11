@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@500;600;700&display=swap");
+
+
+
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1024px;
+    margin: auto;
+}
+
+/* header */
+.header {
+    max-width: 1024px;
+    margin: auto;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+
+    background: transparent;
+    padding: 18px 0;
+    position: fixed;
+    width: 100%;
+    
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav__list {
+    display: flex;
+    
+}
+
+.nav__menu {
+    display: flex;
+}
+
+#logo {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.nav__list li {
+    list-style: none;
+    margin: 0 18px;
+    padding: 0 12px;
+
+}
+
+
+/* home*/
+#home {
+    padding-bottom: 8px;
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.nav__list li a {
+    
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+#theme-button {
+    color: rgb(255, 255, 255);
+}
+
+.home_img {
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 640px;
+    object-fit: cover;
+}
+
+.home_container {
+    color: rgb(255, 255, 255);
+    
+    padding-top: 110px;
+}
+
+.home_data-subtitle {
+    padding: 0 0 20px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.home_data-title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 55px;
+    font-weight: 100;
+    padding-left: 2px;
+    padding-bottom: 40px;
+    padding-top: 10px;
+}
+
+.home_data-title b {
+    font-weight: 800;
+    font-family: 'Raleway', sans-serif;
+}
+
+.home_container .button {
+    padding: 16px 32px;
+    background-color: #14505c;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all .5s;
+}
+
+.home_container .button:hover {
+    background-color: #113c45;
+}
+
+.floatContainer {
+    display: flex;
+    justify-content: end;
+}
+
+.home__social {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+    column-gap: 2.5rem;
+}
+
+.home__social-link {
+    font-size: 1.2rem;
+    width: max-content;
+    color: white;
+    text-decoration: none;
+}
+
+.home_info {
+    color: white;
+    display: flex;
+    width: 328px;
+    right: 1%;
+    background-color: #14505c;
+    padding: 1.5rem 1rem;
+}
+
+.home_info-overlay {
+    width: 170px;
+    overflow: hidden;
+}
+
+.home_info-overlay img {
+    width: 100%;
+    height: 100%;
+    transition: transform .1s ease;
+    cursor: pointer;
+}
+
+.home_info-overlay img:hover {
+    transform: scale(1.2);
+}
+
+.home_info_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: .9rem;
+}
+
+.home_info_content a {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.home_info_content a i {
+    padding-left: 8px;
+}
+
+.home_info-title {
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    
+    margin-bottom: 8px;
+}
+
+/* about */
+.about_section {
+    padding: 200px 0;
+}
+
+.about_container {
+    display: flex;
+
+}
+
+.about_data {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+ .about_title {
+    color: #14505c;
+}
+
+.section_title{
+    color: #14505c;
+    text-align: center;
+}
+
+.about_data .about_description {
+    color: #1d5c69;
+    padding: 30px 0;
+    font-size: 17px;
+    font-weight: 500;
+    padding-right: 40px;
+    margin-bottom: 20px;
+}
+
+.about_data .button {
+    padding: 16px 32px;
+    background-color: #14505c;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    width: 200px;
+    font-weight: 500;
+    transition: all .5s;
+}
+
+.about_img {
+    display: flex;
+    flex-basis: 50%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+.about_img-one {
+    width: 195px;
+}
+
+.about_img-two {
+    width: 250px;
+}
+
+.about_image-overlay {
+    overflow: hidden;
+}
+
+
+.about_image-overlay img{
+    transition: transform .1s ease;
+}
+.about_img-one:hover,
+.about_img-two:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+/*-experience-*/
+.experience_section{
+    padding: 0 0 200px 0;
+}
+.experience_content{
+    display: flex;
+
+    font-family: 'Open Sans', sans-serif;
+    padding: 40px 0 ;
+    
+    justify-content: center;
+}
+
+
+.experience_data{
+    padding: 0 20px;
+}
+.experience_number{
+    font-family: 'Raleway', sans-serif;
+    padding-bottom: 7px;
+    color: #14505c;
+}
+.experience_description{
+    font-size: 14px;
+    color: #14505c;
+}
+.experience_img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.experience_image-overlay{
+    position: relative;
+}
+.experience_img .experience_image-overlay .experience_img-one{
+    width: 100%;
+    width: 434px;
+}
+.experience_img .experience_image-overlay .experience_img-two{
+    width: 250px;
+    position: absolute;
+    top: -600px;
+    right: 101px;
+}
+
+
+/* VIDEO SECTION  */
+.video_description{
+    font-size: 14px;
+    padding-top: 10px;
+    color: #14505c;
+    text-align: center;
+}
+.video_content{
+    width: 100%;
+    padding-top: 42px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.video_section{
+    padding-bottom: 100px;
+}
+
+.video_button{
+    position: absolute;
+    background-color: #14505c;
+    padding: 20px 26px;
+    right: 15%;
+    bottom: -10%;
+}
+.video_button-icon{
+    background-color: #14505c;
+    color: white;
+    font-size: 24px;
+}
+
+
+/* CARDS  */
+.sectiona{
+    padding: 4.5rem 0 2.5rem;
+}
+.section_titlea{
+    font-size: 1.75rem;
+    color:hsl(190, 64%, 18%);
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+
+}
+.containera{
+    max-width: 968px;
+    margin-left: 15rem;
+    margin-right: 1rem;
+}
+.grida{
+    display: grid;
+    gap: 2.6rem;
+
+}
+h1,h2,h3{
+    color: hsl(190, 24%, 95%);
+    font-weight: 600;
+    font-family: 'Raleway', 'Sans-Serif';
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+
+}
+.place_card, .place_img{
+    height: 260px;
+}
+.place_container{
+    grid-template-columns: repeat(3,max-content);
+    justify-content: center;
+}
+.place_card{
+    overflow: hidden;
+    position: relative;
+}
+.place_card:hover .place_img{
+    transform: scale(1.1);
+}
+
+.place_img{
+    transition: .3s;
+}
+.place_content, .place_title{
+    color: white;
+}
+
+.place_content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: .75rem .75rem 1rem;
+}
+.place_rating {
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+}
+.place_rating_icon{
+    font-size: .813rem;
+
+}
+.place_rating_number{
+    font-size: .813rem;
+}
+.place_subtitles, .place_price{
+    display: block;
+}
+.place_title{
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+.place_subtitles{
+  font-size: .813rem;
+  margin-bottom: 1.25rem;
+}
+.place_button{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: .75rem 1rem ;
+}
+button,input{
+    border: none;
+    font-family: 'Open Sans','sans-serif';
+    font-size: .938rem;
+    cursor: pointer;
+}
+.button{
+    color:white;
+    background-color: hsl(190, 64%, 22%);
+    padding:-1rem, 2rem;
+    font-weight: 600; 
+    transition: .3s;
+}
+.button:hover{
+    background-color: hsl(190, 64%, 15%);
+
+}
+.button_flex{
+    display: flex;
+    align-items: center;
+    column-gap: .25rem;
+}
+
+
+
+
+/* SUBSCRIBE  */
+
+.subscribe_bg{
+    background-color: hsl(190, 64%, 22%);
+    padding: 2.5rem 0;
+}
+.section_title, .subscribe_description{
+    color: white;
+}
+.subscribe_description{
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+.subscribe_form{
+    padding: .5rem;
+    background-color: hsl(190, 24%, 97%);
+    display: flex;
+    justify-content: space-between;
+}
+.subscribe_input{
+    width: 70%;
+    padding-right: .5rem;
+    background-color: hsl(190, 24%, 97%);
+    color: hsl(190, 24%, 35%);
+    height: 3rem;
+    width: 10rem;
+}
+.subscribe_input::placeholder{
+    color: hsl(190, 24%, 35%);
+}
+
+
+/* SPONSERS  */
+
+.sponser_section{
+    padding: 100px 0;
+}
+.sponser_container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.sponser_img{
+    width: 80px;
+    
+
+}
+
+
+
+
+/* Footer  */
+.footer_section{
+    padding: 100px 0;
+}
+
+.footer_content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.footer_data{
+    flex-basis: 25%;
+    color: #14505c;
+}
+.footer_title{
+    color: hsl(190, 64%, 22%);;
+    padding: 10px 0 ;
+}
+.footer_item{
+    list-style: none;
+}
+
+.footer_link{
+    text-decoration: none;
+    color: #14505c;
+}
+.footer_social_icon{
+    padding: 10px 0 ;
+}
+.footer_social{
+    text-decoration: none;
+    color: #14505c;
+    font-size: 25px;
+    padding: 5px 5px;
+    padding-left: 0;
+}
+    </style>
+
+    <title>MAJOR PROJECT -( TRAVEL WEBSITE )</title>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo" id="logo">Travel</a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#" class="nav__link active-link" id="home">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#discover" class="nav__link">Discover</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#place" class="nav__link">Places</a>
+                    </li>
+                </ul>
+
+                <div class="nav__dark">
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Home section  -->
+        <section class="home" id="">
+            <img src="C:\Users\SRINIVAS\Desktop\Major\1.jpeg" class="home_img" />
+
+            <div class="home_container container">
+                <div class="home_data">
+                    <span class="home_data-subtitle">Discover your place</span>
+                    <h1 class="home_data-title">
+                        Explore The <br />
+                        Best
+                        <b>Beautiful <br />
+                            Beaches</b>
+                    </h1>
+                    <a href="" class="button">Explore</a>
+                </div>
+
+
+                <div class="floatContainer">
+                    <div class="home_info">
+                        <div class="home_info_content">
+                            <span class="home_info-title">5 best places to visit</span>
+                            <a>More <i class="ri-arrow-right-line"></i></a>
+                        </div>
+                        <div class="home_info-overlay">
+                            <img src="C:\Users\SRINIVAS\Desktop\Major\2.jpeg" />
+                        </div>
+                    </div>
+                </div>
+                <div class="home__social">
+                    <a href="https://www.facebook.com/" target="_blank" class="home__social-link">
+                        <i class="ri-facebook-box-fill"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" class="home__social-link">
+                        <i class="ri-instagram-fill"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" class="home__social-link">
+                        <i class="ri-twitter-fill"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- AboUT SECTION  -->
+        <section class="about_section">
+            <div class="about_container container">
+                <div class="about_data">
+                    <h2 class=" about_title">More Information <br>
+                        About The Best Beaches</h2>
+                    <p class="about_description">You can find the most beautiful and pleasant places at the best prices
+                        with special discounts, you choose the place we will guide you all the way to wait, get your
+                        place now.</p>
+                    <a href="#" class="button">Reserve a place </a>
+                </div>
+                <div class="about_img">
+                    <div class="about_image-overlay">
+                        <img class="about_img-one" src="C:\Users\SRINIVAS\Desktop\Major\3.jpeg">
+                    </div>
+                    <div class="about_image-overlay">
+                        <img class="about_img-two" src="C:\Users\SRINIVAS\Desktop\Major\4.jpeg"></div>
+                </div>
+            </div>
+        </section>
+
+         <!-- Discover  -->
+
+
+
+        <!-- EXPERIENCE SECTION  -->
+        <section class="experience_section">
+            <h2 class="section_titlea">With Our Experience <br>
+                We Will Serve You</h2>
+            <div class="experience_container container">
+                <div class="experience_content">
+                    <div class="experience_data">
+                        <h2 class="experience_number">20</h2>
+                        <span class="experience_description">Year <br>Experience</span>
+                    </div>
+                    <div class="experience_data">
+                        <h2 class="experience_number">75</h2>
+                        <span class="experience_description">Complete<br>
+                            tours</span>
+                    </div>
+                    <div class="experience_data">
+                        <h2 class="experience_number">650+</h2>
+                        <span class="experience_description">Tourist<br>
+                            destination</span>
+                    </div>
+                </div>
+
+
+                <div class="experience_img">
+                    <div class="experience_image-overlay">
+                        <img class="experience_img-one" src="C:\Users\SRINIVAS\Desktop\Major\8.jpeg">
+                    </div>
+                    <div class="about_image-overlay"><img class="about_img-two" src="C:\Users\SRINIVAS\Desktop\Major\9.jpeg">
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIDEO SECTION  -->
+        <section class="video_section">
+            <h2 class="section_titlea">Video Tour</h2>
+            <div class="video_container container">
+                <p class="video_description">
+                    Find out more with our video of the most beautiful and <br>pleasant places for you and your family.
+                </p>
+                <div class="video_content">
+                    <video class="video-file">
+                        <source src="C:\Users\SRINIVAS\Desktop\Major\10V.mp4" type="video/mp4" />
+                    </video>
+                    <div class="video_button">
+                        <i class="ri-play-line video_button-icon"></i></div>
+                </div>
+            </div>
+        </section>
+
+
+        
+            <!-- cards  -->
+               <section class="place section" id="place">
+                <h2 class="section_titlea">Choose your place</h2>
+                <div class="place_container containera grida">
+                    <!-- card1  -->
+                        <div class="place_card">
+                            <img src="C:\Users\SRINIVAS\Desktop\Major\11.jpeg" alt="" class="place_img">
+                            <div class="place_content">
+                                <span class="place_rating">
+                                    <i class="ri-star-line place_rating_icon"></i>
+                                    <span class="place_rating_number">4.8</span>
+                                </span>
+
+                                <div class="place_data">
+                                    <h3 class="place_title">Bali</h3>
+                                    <span class="place_subtitle">Indonesia</span>
+                                    <span class="place_price">$2499</span>
+                                </div>
+                            </div>
+
+                            <button class="button button_flex place_button">
+                                <i class="ri-arrow-right-line"></i>
+                            </button>
+                        </div>
+                
+                            <!-- card 2  -->
+                        <div class="place_card">
+                            <img src="C:\Users\SRINIVAS\Desktop\Major\12.jpeg" alt="" class="place_img">
+                            <div class="place_content">
+                                <span class="place_rating">
+                                    <i class="ri-star-line place_rating_icon"></i>
+                                    <span class="place_rating_number">5.0</span>
+                                </span>
+
+                                <div class="place_data">
+                                    <h3 class="place_title">Bora Bora</h3>
+                                    <span class="place_subtitle">Polinesia</span>
+                                    <span class="place_price">$1599</span>
+                                </div>
+                            </div>
+
+                            <button class="button button_flex place_button">
+                                <i class="ri-arrow-right-line"></i>
+                            </button>
+                        </div>
+                
+                             <!-- card 3  -->
+                        <div class="place_card">
+                            <img src="C:\Users\SRINIVAS\Desktop\Major\13.jpeg" alt="" class="place_img">
+                            <div class="place_content">
+                                <span class="place_rating">
+                                    <i class="ri-star-line place_rating_icon"></i>
+                                    <span class="place_rating_number">4.9</span>
+                                </span>
+
+                                <div class="place_data">
+                                    <h3 class="place_title">Huwali</h3>
+                                    <span class="place_subtitle">EE.UU</span>
+                                    <span class="place_price">$3499</span>
+                                </div>
+                            </div>
+
+                            <button class="button button_flex place_button">
+                                <i class="ri-arrow-right-line"></i>
+                            </button>
+                        </div>
+                                 
+                              <!-- card4  -->
+                        <div class="place_card">
+                            <img src="C:\Users\SRINIVAS\Desktop\Major\14.jpeg" alt="" class="place_img">
+                            <div class="place_content">
+                                <span class="place_rating">
+                                    <i class="ri-star-line place_rating_icon"></i>
+                                    <span class="place_rating_number">4.8</span>
+                                </span>
+
+                                <div class="place_data">
+                                    <h3 class="place_title">Whiteheaven</h3>
+                                    <span class="place_subtitle">Australia</span>
+                                    <span class="place_price">$2499</span>
+                                </div>
+                            </div>
+
+                            <button class="button button_flex place_button">
+                                <i class="ri-arrow-right-line"></i>
+                            </button>
+                        </div>
+                
+                             <!-- card 5  -->
+                        <div class="place_card">
+                            <img src="C:\Users\SRINIVAS\Desktop\Major\15.jpeg" alt="" class="place_img">
+                            <div class="place_content">
+                                <span class="place_rating">
+                                    <i class="ri-star-line place_rating_icon"></i>
+                                    <span class="place_rating_number">4.8</span>
+                                </span>
+
+                                <div class="place_data">
+                                    <h3 class="place_title">Hvar</h3>
+                                    <span class="place_subtitle">Croacha</span>
+                                    <span class="place_price">$1999</span>
+                                </div>
+                            </div>
+
+                            <button class="button button_flex place_button">
+                                <i class="ri-arrow-right-line"></i>
+                            </button>
+                        </div>
+                </div>
+            </section>
+
+
+         <!-- Subscribe   -->
+         <section class="subscribe sectiona">
+            <div class="subscribe_bg containera">
+              <div class="subscribe_container containera">
+
+
+                <h2 class="section_title subscribe_title ">Subscribe Our <br > Newsletter</h2>
+                <p class="subscribe_description">Subscribe to our newsletter and get a special 30% discount</p>
+
+
+                <form action="" class="subscribe_form">
+                <input type="email" name="" placeholder="Enter Your Email" id="" class="subscribe_input">
+                <button class="button btn">Subscribe
+                </button>
+                </form>
+              </div>
+            </div>
+        </section>
+
+
+
+        <!-- Sponsers   -->
+        <section class="sponser_section">
+            <div class="sponser_container container">
+                <div class="sponser_content"><img src="C:\Users\SRINIVAS\Desktop\Major\16.jpeg"  class="sponser_img"></div> 
+
+                <div class="sponser_content"><img src="C:\Users\SRINIVAS\Desktop\Major\17.jpeg" class="sponser_img"></div> 
+
+
+                <div class="sponser_content"><img src="C:\Users\SRINIVAS\Desktop\Major\18.jpeg" class="sponser_img"></div>
+                
+                
+                <div class="sponser_content"><img src="C:\Users\SRINIVAS\Desktop\Major\19.jpeg" class="sponser_img"></div> 
+
+
+                <div class="sponser_content"><img src="C:\Users\SRINIVAS\Desktop\Major\20.jpeg" class="sponser_img"></div> 
+            </div>
+        </section>
+
+        <!-- FOOTER  -->
+
+        <section class="footer_section">
+            <div class="footer_container container">
+                <div class="footer_content">
+                    <div class="footer_data">
+                        <h3 class="footer_title">Travel</h3>
+                        <p class="footer_description">Travel you choose the <br>
+                            destination, we offer you the <br>
+                            experience.</p>
+                            
+                    <div class="footer_social_icon">
+                        <a href="#" class="footer_social">
+                            <i class="ri-facebook-box-fill"></i>
+                        </a>
+                        
+                        <a href="#" class="footer_social">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                        
+                        <a href="#" class="footer_social">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                        
+                        <a href="#" class="footer_social">
+                            <i class="ri-youtube-fill"></i>
+                        </a>
+                    </div>
+                    </div>
+                    <div class="footer_data">
+                        <h3 class="footer_title">About</h3>
+                        <ul>
+                            <li class="footer_item">
+                                <a href="#" class="footer_link">About us</a> </li>
+                            
+                            <li class="footer_item"><a href="#" class="footer_link">
+                                features
+                            </a> </li>
+                            
+                            <li class="footer_item"> <a href="#" class="footer_link">New & blog</a> </li>
+                        </ul>
+                    </div>
+                    <div class="footer_data">
+                        <h3 class="footer_title">Company</h3>
+                        <ul>
+                            <li class="footer_item">
+                                <a href="#" class="footer_link">About us</a> </li>
+                            
+                            <li class="footer_item"><a href="#" class="footer_link">
+                                features
+                            </a> </li>
+                            
+                            <li class="footer_item"> <a href="#" class="footer_link">New & blog</a> </li>
+                        </ul>
+                    </div>
+                    <div class="footer_data">
+                        <h3 class="footer_title">Support</h3>
+                        <ul>
+                            <li class="footer_item">
+                                <a href="#" class="footer_link">About us</a> </li>
+                            
+                            <li class="footer_item"><a href="#" class="footer_link">
+                                features
+                            </a> </li>
+                            
+                            <li class="footer_item"> <a href="#" class="footer_link">New & blog</a> </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer_right">
+
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
